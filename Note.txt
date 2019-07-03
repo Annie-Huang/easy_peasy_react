@@ -2,6 +2,7 @@ https://www.youtube.com/watch?v=cSUt8b2qapM
 
 https://easy-peasy.now.sh/
 https://codesandbox.io/s/easypeasyreact-jpdd2
+https://jsonplaceholder.typicode.com/todos
 
 ======================================================
 C:\react>create-react-app easy_peasy_react

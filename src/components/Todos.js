@@ -1,9 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import TodoItem from "./TodoItem";
-import {useStoreState} from "easy-peasy";
+import {useStoreActions, useStoreState} from "easy-peasy";
 
 const Todos = () => {
     const todos = useStoreState(state => state.todos);
+    const fetchTodos = useStoreActions(actions => actions.fetchTodos);
+
+    // add [] so it stop running everytime the component gets updates. We only do it for the first time.
+    // minic componentDidMount
+    useEffect(() => {
+        fetchTodos();
+    }, []);
+
     return (
         <Fragment>
             <h1>Todos</h1>
