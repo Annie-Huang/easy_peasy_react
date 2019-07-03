@@ -1,24 +1,9 @@
 import React, { Fragment } from "react";
 import TodoItem from "./TodoItem";
+import {useStoreState} from "easy-peasy";
 
 const Todos = () => {
-    const todos = [
-        {
-            id: 1,
-            title: "Take out trash",
-            completed: true
-        },
-        {
-            id: 2,
-            title: "Pickup kids from school",
-            completed: false
-        },
-        {
-            id: 3,
-            title: "Dinner with boss",
-            completed: false
-        }
-    ];
+    const todos = useStoreState(state => state.todos);
     return (
         <Fragment>
             <h1>Todos</h1>
