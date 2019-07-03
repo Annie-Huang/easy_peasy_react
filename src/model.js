@@ -1,3 +1,5 @@
+import {action} from 'easy-peasy';
+
 export default {
     todos: [
         {
@@ -15,5 +17,15 @@ export default {
             title: "Dinner with boss",
             completed: false
         }
-    ]
+    ],
+    // Actions
+    toggle: action((state, id) => {
+        state.todos.map(todo => {
+            if(todo.id === id) {
+                todo.completed = !todo.completed
+            }
+            return todo;
+        })
+    })
+
 }
