@@ -6,3 +6,4 @@ https://codesandbox.io/s/easypeasyreact-jpdd2
 ======================================================
 C:\react>create-react-app easy_peasy_react
 C:\react\easy_peasy_react>npm install easy-peasy
+C:\react\easy_peasy_react>npm i uuid
