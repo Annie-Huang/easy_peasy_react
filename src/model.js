@@ -1,4 +1,5 @@
 import {action} from 'easy-peasy';
+import uuid from "uuid";
 
 export default {
     todos: [
@@ -19,6 +20,10 @@ export default {
         }
     ],
     // Actions
+    add: action((state, todo) => {
+        todo.id = uuid.v4();
+        state.todos = [...state.todos, todo];
+    }),
     toggle: action((state, id) => {
         state.todos.map(todo => {
             if(todo.id === id) {
@@ -30,5 +35,4 @@ export default {
     remove: action((state, id) => {
         state.todos = state.todos.filter(todo => todo.id !== id);
     })
-
 }
